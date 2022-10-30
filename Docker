@@ -1,0 +1,17 @@
+# pull base image from linux
+from openjdk:8-jdk-alpine
+
+
+
+
+
+
+
+
+
+
+
+# copy buildFile.jar to docker
+copy target/client-service-0.0.1-SNAPSHOT.jar client-service-0.1.jar
+# run java file
+ENTRYPOINT ["java", "-jar", "/client-service-0.1.jar"]
